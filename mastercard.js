@@ -13,7 +13,7 @@ const inputPass = document.querySelector("#password");
 let temp = -1;
 
 function addToList() {
-  const tbody1 = document.querySelector("#tbody1");
+  const tbody1 = document.querySelector("#tbody1"); // Thêm thể hiện cho tbody1
   tbody1.innerHTML = "";
   let ds = "";
   for (let i = 0; i < userCards.length; i++) {
@@ -54,7 +54,7 @@ function pressSave() {
           date === "" ? "date" : ""
         },${password === "" ? "password" : ""} `
       );
-    } else if (isValidDate !== date) {
+    } else if (!isValidDate(date)) {
       alert(`nhập sai định dạng MM/YY`);
     } else if (userCards.every((item) => item.card !== card)) {
       userCards.push({ card, date, Password: password, showCVV: false });
