@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <form id="myform">
+      <div class="form-box">
+        <h3>Select Card</h3>
+        <div class="image">
+          <img src="image/mastercard.jpg" alt="..." />
+          <img src="image/paypal.png" alt="..." />
+          <img src="image/visa.png" alt="..." />
+          <img src="image/american express.png" alt="..." />
+          <img src="image/discover.jpg" alt="..." />
+        </div>
+        <label for="cardNumber">Card Number</label><br />
+        <input
+          id="cardNumber"
+          type="text"
+          name="cardNumber"
+          maxlength="16"
+        /><br />
+        <div class="desc">
+          <div class="desc1">
+            <label for="expiryDate">Expiry Date</label><br />
+            <input
+              id="Date"
+              type="text"
+              name="expiryDate"
+              placeholder="MM/YY"
+              maxlength="4"
+            /><br />
+          </div>
+          <div class="desc2">
+            <label for="password"> CVC/CVV</label><br />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="****"
+              maxlength="3"
+            /><br />
+          </div>
+        </div>
+
+        <button id="save" onclick="pressSave()">SAVE</button>
+      </div>
+    </form>
+    <table id="table">
+      <tr>
+        <th>Card Img</th>
+        <th>Card Number</th>
+        <th>Expiry Date</th>
+        <th>CVV</th>
+        <th>Action</th>
+      </tr>
+      <tbody id="tbody1"></tbody>
+    </table>
+  </body>
+  <script src="mastercard.js"></script>
+</html>
